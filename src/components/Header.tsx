@@ -1,12 +1,16 @@
+import Link from 'next/link'
+
 function Header() {
   return (
-    <header className="px-2">
+    <>
       <div>
         <span>Bookstore</span>
       </div>
-      <div className="border border-zinc-300 border-2 flex justify-between items-center bg-white p-2">
+      <div className="border-2 border-zinc-300 flex justify-between items-center bg-white p-2">
         <div>
-          <h1 className="text-3xl font-bold">Bookstore</h1>
+          <h1 className="text-3xl font-bold">
+            <Link href="/">Bookstore</Link>
+          </h1>
         </div>
         <div className="flex gap-7">
           <div>
@@ -51,35 +55,8 @@ function Header() {
           </div>
         </div>
       </div>
-    </header>
+    </>
   )
 }
 
 export default Header
-/*
-<label htmlFor="switch" className="switch-dark-mode">
-            <input type="checkbox" id="switch"/>
-            <span>Dark mode</span>
-        </label>
-input[type="checkbox"]::before {
-    content: '';
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    top: 0;
-    left: 0;
-    background-color: #fff;
-    transform: scale(0.9);
-    transition: .3s
-}
-
-input:checked[type="checkbox"]:before {
-    left: 20px;
-}
-
-.switch-dark-mode {
-    display: flex;
-    align-items: center;
-}
-*/
