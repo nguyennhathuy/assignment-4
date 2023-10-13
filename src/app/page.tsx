@@ -1,12 +1,16 @@
 import React from 'react'
-import { testClass, sizeClass } from '../styles/enumStyle'
-import Header from '../components/Header'
+import Table from '../components/Table'
+import SearchAndCreateBook from '../components/SearchAndCreateBook'
+import DeleteModal from '../components/DeleteModal'
+import CreateModal from '../components/CreateModal'
 
 export default function Home() {
   return (
-    <main>
-      <Header />
-      <p className={`${testClass} ${sizeClass}`}>Hello1</p>
-    </main>
+    <>
+      {/* <SearchAndCreateBook />
+      <Table /> */}
+      {/* <DeleteModal /> */}
+      <CreateModal />
+    </>
   )
 }
