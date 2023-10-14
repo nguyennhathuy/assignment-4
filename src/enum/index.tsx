@@ -2,7 +2,6 @@ export const TABLE_HEADER = {
   NAME: 'NAME',
   AUTHOR: 'AUTHOR',
   TOPIC: 'TOPIC',
-  ACTION: 'ACTION',
 }
 
 export const DUMMY_DATA = [

@@ -12,6 +12,7 @@ function Table() {
                 {TABLE_HEADER[item]}
               </th>
             ))}
+            <th className="border-2 border-zin-300 py-1 px-2">Action</th>
           </tr>
         </thead>
         <tbody>
