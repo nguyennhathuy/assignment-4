@@ -1,4 +1,7 @@
-function SearchAndCreateBook() {
+type Props = {
+  handleToggleCreateModal: () => void
+}
+function SearchAndCreateBook({ handleToggleCreateModal }: Props) {
   return (
     <div className="flex justify-between">
       <label htmlFor="search-book">
@@ -9,7 +12,10 @@ function SearchAndCreateBook() {
           className="border-2 border-zin-300 py-2 px-3 rounded-md"
         />
       </label>
-      <button className="py-2 px-3 bg-[#D2445C] text-white rounded-md">
+      <button
+        onClick={handleToggleCreateModal}
+        className="py-2 px-3 bg-[#D2445C] text-white rounded-md"
+      >
         Add book
       </button>
     </div>
