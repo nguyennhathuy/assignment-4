@@ -28,6 +28,7 @@ function CreateModal() {
                   type="text"
                   className="border-2 border-zin-300 rounded-md w-full"
                 />
+                
               ) : (
                 <select
                   id="topic"
