@@ -5,6 +5,7 @@ export const TABLE_HEADER = {
 }
 
 export const DUMMY_DATA = [
+  
   {
     id: idGenerator(),
     [TABLE_HEADER.NAME]: 'Alfreds Futterkiste',
