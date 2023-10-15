@@ -12,6 +12,7 @@ function DeleteModal() {
         </div>
         <div className="text-center py-10 flex justify-center">
           <p className="w-[250px]">
+            
             Do you want to delete <strong>Refactoring</strong> book
           </p>
         </div>
