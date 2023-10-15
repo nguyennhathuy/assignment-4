@@ -6,6 +6,7 @@ function SearchAndCreateBook() {
           type="text"
           id="search-book"
           placeholder="Search books"
+          
           className="border-2 border-zin-300 py-2 px-3 rounded-md"
         />
       </label>
