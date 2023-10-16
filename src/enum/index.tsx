@@ -1,34 +1,45 @@
+export const NAME_HEADER = {
+  label: 'Name',
+  value: 'Name',
+}
+export const AUTHOR_HEADER = {
+  label: 'Author',
+  value: 'Author',
+}
+export const TOPIC_HEADER = {
+  label: 'Topic',
+  value: 'Topic',
+}
 export const TABLE_HEADER = {
-  NAME: 'NAME',
-  AUTHOR: 'AUTHOR',
-  TOPIC: 'TOPIC',
+  [NAME_HEADER.label]: NAME_HEADER.value,
+  [AUTHOR_HEADER.label]: AUTHOR_HEADER.value,
+  [TOPIC_HEADER.label]: TOPIC_HEADER.value,
 }
 
 export const DUMMY_DATA = [
-  
   {
     id: idGenerator(),
-    [TABLE_HEADER.NAME]: 'Alfreds Futterkiste',
-    [TABLE_HEADER.AUTHOR]: 'Maria Anders',
-    [TABLE_HEADER.TOPIC]: 'Maria Anders',
+    [NAME_HEADER.label]: 'Alfreds Futterkiste',
+    [AUTHOR_HEADER.label]: 'Maria Anders',
+    [TOPIC_HEADER.label]: 'Maria Anders',
   },
   {
     id: idGenerator(),
-    [TABLE_HEADER.NAME]: 'Alfreds Futterkiste',
-    [TABLE_HEADER.AUTHOR]: 'Maria Anders',
-    [TABLE_HEADER.TOPIC]: 'Maria Anders',
+    [NAME_HEADER.label]: 'Alfreds Futterkiste',
+    [AUTHOR_HEADER.label]: 'Maria Anders',
+    [TOPIC_HEADER.label]: 'Maria Anders',
   },
   {
     id: idGenerator(),
-    [TABLE_HEADER.NAME]: 'Alfreds Futterkiste',
-    [TABLE_HEADER.AUTHOR]: 'Maria Anders',
-    [TABLE_HEADER.TOPIC]: 'Maria Anders',
+    [NAME_HEADER.label]: 'Alfreds Futterkiste',
+    [AUTHOR_HEADER.label]: 'Maria Anders',
+    [TOPIC_HEADER.label]: 'Maria Anders',
   },
   {
     id: idGenerator(),
-    [TABLE_HEADER.NAME]: 'Alfreds Futterkiste',
-    [TABLE_HEADER.AUTHOR]: 'Maria Anders',
-    [TABLE_HEADER.TOPIC]: 'Maria Anders',
+    [NAME_HEADER.label]: 'Alfreds Futterkiste',
+    [AUTHOR_HEADER.label]: 'Maria Anders',
+    [TOPIC_HEADER.label]: 'Maria Anders',
   },
 ]
 
