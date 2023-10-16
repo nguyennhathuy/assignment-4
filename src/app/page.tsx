@@ -7,10 +7,10 @@ import CreateModal from '../components/CreateModal'
 export default function Home() {
   return (
     <>
-      {/* <SearchAndCreateBook />
-      <Table /> */}
+      <SearchAndCreateBook />
+      <Table />
       {/* <DeleteModal /> */}
-      <CreateModal />
+      {/* <CreateModal /> */}
     </>
   )
 }
