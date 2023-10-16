@@ -1,5 +1,11 @@
 import Link from 'next/link'
-import { TABLE_HEADER, DUMMY_DATA } from '../enum'
+import {
+  TABLE_HEADER,
+  DUMMY_DATA,
+  NAME_HEADER,
+  AUTHOR_HEADER,
+  TOPIC_HEADER,
+} from '../enum'
 
 function Table() {
   return (
@@ -19,7 +25,7 @@ function Table() {
           {DUMMY_DATA.map((book) => (
             <tr key={book.id}>
               <td className="border-2 border-zin-300 py-1 px-2">
-                {book[TABLE_HEADER.NAME]}
+                {book[TABLE_HEADER.NAME_HEADER]}
               </td>
               <td className="border-2 border-zin-300 py-1 px-2">
                 {book[TABLE_HEADER.AUTHOR]}
