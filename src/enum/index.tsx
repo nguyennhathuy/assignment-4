@@ -49,3 +49,5 @@ export function idGenerator(): string {
   }
   return `${S4()}${S4()}-${S4()}-${S4()}-${S4()}-${S4()}${S4()}${S4()}`
 }
+
+export const TOPIC = ['Programming', 'Database', 'DevOps']
