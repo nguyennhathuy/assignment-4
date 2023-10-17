@@ -5,6 +5,7 @@ type Props = {
 }
 function DeleteModal({ handleToggleDelteModal }: Props) {
   return (
+    
     <div className="bg-black/50 fixed top-0 left-0 h-screen w-[100%]">
       <div className="bg-white w-[300px] relative top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] p-4">
         <div className="flex justify-between">

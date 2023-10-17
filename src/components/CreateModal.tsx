@@ -3,6 +3,7 @@ import { TABLE_HEADER, TOPIC } from '../enum'
 
 type Props = {
   handleToggleCreateModal: () => void
+  
 }
 
 function CreateModal({ handleToggleCreateModal }: Props) {

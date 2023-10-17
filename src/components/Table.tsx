@@ -6,6 +6,7 @@ type Props = {
 }
 
 function Table({ handleToggleDelteModal }: Props) {
+  
   return (
     <div className="mt-5">
       <table className="table-fixed w-[100%] border-collapse">
