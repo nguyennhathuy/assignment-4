@@ -5,7 +5,7 @@ type Props = {
   handleToggleDelteModal: () => void
 }
 
-function TableItem({ handleToggleDelteModal }: Props) {
+function TableItem({ handleToggleDelteModal }: Props): JSX.Element {
   return (
     <>
       {DUMMY_DATA.map((book) => (
