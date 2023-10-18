@@ -1,7 +1,13 @@
 import DetailItem from '../../../components/DetailItem'
 
-function DetailBook() {
-  return <DetailItem />
+type Props = {
+  params: {
+    id: string
+  }
+}
+
+function DetailBook({ params: { id } }: Props) {
+  return <DetailItem id={id} />
 }
 
 export default DetailBook
