@@ -13,7 +13,7 @@ function SearchAndCreateBook({
   useEffect(() => {
     handleSearchBook(searchString)
   }, [searchString])
-  function handleChangeSearchInput(e) {
+  function handleChangeSearchInput(e): void {
     setSearchString(e.target.value)
   }
   return (
