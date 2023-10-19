@@ -6,9 +6,9 @@ import {
   TABLE_HEADER,
   TOPIC,
   TOPIC_HEADER,
-  idGenerator,
 } from '../enum'
 import { Book } from '../types'
+import { idGenerator } from '../enum/util'
 
 type Props = {
   handleToggleCreateModal: () => void
@@ -19,25 +19,25 @@ function CreateModal({
   handleToggleCreateModal,
   handleCreateBook,
 }: Props): JSX.Element {
-  const [name, setName] = useState('')
-  const [author, setAuthor] = useState('')
-  const [topic, setTopic] = useState('')
-  function handleChangeData(e) {
+  const [name, setName] = useState<string>('')
+  const [author, setAuthor] = useState<string>('')
+  const [topic, setTopic] = useState<string>('')
+  function handleChangeData(e): void {
     switch (e.target.name) {
-      case NAME_HEADER.label.toLocaleLowerCase():
+      case NAME_HEADER.label:
         setName(e.target.value)
         break
-      case AUTHOR_HEADER.label.toLocaleLowerCase():
+      case AUTHOR_HEADER.label:
         setAuthor(e.target.value)
         break
-      case TOPIC_HEADER.label.toLocaleLowerCase():
+      case TOPIC_HEADER.label:
         setTopic(e.target.value)
         break
       default:
         break
     }
   }
-  function handleSubmit(e) {
+  function handleSubmit(e): void {
     e.preventDefault()
     const newBook: Book = {
       id: idGenerator(),
