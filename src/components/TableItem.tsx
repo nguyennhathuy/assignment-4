@@ -11,13 +11,13 @@ function TableItem({ handleToggleDelteModal }: Props): JSX.Element {
       {DUMMY_DATA.map((book) => (
         <tr key={book.id}>
           <td className="border-2 border-zin-300 py-1 px-2">
-            {book[TABLE_HEADER.NAME.toLocaleLowerCase()]}
+            {book[TABLE_HEADER.NAME]}
           </td>
           <td className="border-2 border-zin-300 py-1 px-2">
-            {book[TABLE_HEADER.AUTHOR.toLocaleLowerCase()]}
+            {book[TABLE_HEADER.AUTHOR]}
           </td>
           <td className="border-2 border-zin-300 py-1 px-2">
-            {book[TABLE_HEADER.TOPIC.toLocaleLowerCase()]}
+            {book[TABLE_HEADER.TOPIC]}
           </td>
           <td className="border-2 border-zin-300 py-1 px-2 flex justify-center gap-2">
             <button className="py-1 px-2 bg-green-500 text-white rounded-md">

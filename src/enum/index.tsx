@@ -1,3 +1,5 @@
+import { idGenerator } from './util'
+
 export const NAME_HEADER = {
   label: 'name',
   value: 'name',
@@ -186,12 +188,5 @@ export const DUMMY_DATA = [
     topic: 'Adventure',
   },
 ]
-
-export function idGenerator(): string {
-  const S4 = function (): string {
-    return (((1 + Math.random()) * 0x10000) | 0).toString(16).substring(1)
-  }
-  return `${S4()}${S4()}-${S4()}-${S4()}-${S4()}-${S4()}${S4()}${S4()}`
-}
 
 export const TOPIC = ['Programming', 'Database', 'DevOps']
