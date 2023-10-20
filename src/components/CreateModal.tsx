@@ -38,6 +38,7 @@ function CreateModal({
     }
   }
   function handleSubmit(e): void {
+    
     e.preventDefault()
     const newBook: Book = {
       id: idGenerator(),
