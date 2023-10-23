@@ -40,8 +40,8 @@ function Table({
                 <td className="border-2 border-zin-300 py-1 px-2">
                   {book[TOPIC_HEADER.label]}
                 </td>
-                <td className="border-2 border-zin-300 py-1 px-2 flex justify-center gap-2">
-                  <button className="py-1 px-2 bg-green-500 text-white rounded-md">
+                <td className="border-2 border-zin-300 py-1 px-2 text-center">
+                  <button className="py-1 px-2 bg-green-500 text-white rounded-md mr-2">
                     <Link href={`/book/${book.id}`}>Detail</Link>
                   </button>
                   <button
