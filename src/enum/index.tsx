@@ -8,6 +8,7 @@ export const NAME_HEADER = {
 export const AUTHOR_HEADER = {
   label: 'author',
   value: 'author',
+  
 }
 export const TOPIC_HEADER = {
   label: 'topic',
