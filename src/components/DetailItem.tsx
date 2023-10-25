@@ -1,9 +1,10 @@
 'use client'
 
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
-import { Book } from '../types'
 import DeleteModal from './DeleteModal'
+import { Book } from '../types'
 
 type Props = {
   id: string
@@ -12,10 +13,9 @@ type Props = {
 function DetailItem({ id }: Props): JSX.Element {
   const [specificBook, setSpecificBook] = useState<Book | null>()
   const [isOpenDeleteModal, setIsOpenDeleteModal] = useState<boolean>(false)
+  const router = useRouter()
+  const allBooks: Book[] = JSON.parse(localStorage.getItem('bookList') || '[]')
   useEffect(() => {
-    const allBooks: Book[] = JSON.parse(
-      localStorage.getItem('bookList') || '[]',
-    )
     const specificBook: Book | undefined = allBooks.find(
       (item) => item.id === id,
     )
@@ -25,7 +25,10 @@ function DetailItem({ id }: Props): JSX.Element {
     setIsOpenDeleteModal((prev) => !prev)
   }
   function handleDeleteBook(): void {
-    console.log('delete book')
+    const newBookList: Book[] = allBooks.filter((book) => book.id !== id)
+    localStorage.setItem('bookList', JSON.stringify(newBookList))
+    handleToggleDeleteModal()
+    router.push('/')
   }
   return (
     <>
