@@ -78,6 +78,7 @@ function BodyContent(): JSX.Element {
         <Pagination
           bookList={bookList}
           handleChangePage={(page) => handleChangePage(page)}
+          currentPage={currentPage}
         />
       ) : null}
       {isOpenDeleteModal ? (

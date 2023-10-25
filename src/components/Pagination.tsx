@@ -3,8 +3,13 @@ import { Book } from '../types'
 type Props = {
   bookList: Book[] | []
   handleChangePage: (page: number) => void
+  currentPage: number
 }
-function Pagination({ bookList = [], handleChangePage }: Props): JSX.Element {
+function Pagination({
+  bookList = [],
+  handleChangePage,
+  currentPage,
+}: Props): JSX.Element {
   return (
     <div className="flex justify-end gap-2">
       {(() => {
@@ -14,7 +19,9 @@ function Pagination({ bookList = [], handleChangePage }: Props): JSX.Element {
             <a
               href="/#"
               key={i}
-              className="border-2 border-zin-300 py-1 px-2"
+              className={`border-2 border-zin-300 py-1 px-2 ${
+                currentPage === i + 1 ? 'bg-slate-200' : ''
+              }`}
               onClick={() => handleChangePage(i + 1)}
             >
               {i + 1}
