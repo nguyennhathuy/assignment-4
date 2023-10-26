@@ -44,7 +44,6 @@ function CreateModal({
       name,
       author,
       topic,
-      
     }
     handleCreateBook(newBook)
     setName('')
