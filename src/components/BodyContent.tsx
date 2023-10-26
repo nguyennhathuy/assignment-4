@@ -40,6 +40,7 @@ function BodyContent(): JSX.Element {
   function handleDeleteBook(): void {
     const newBookList: Book[] = bookList.filter(
       (book) => book.id !== bookDelete,
+      
     )
     const nextPagination = Math.ceil((bookList.length - 1) / 5)
     if (nextPagination < currentPage) {
