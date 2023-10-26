@@ -1,10 +1,38 @@
+'use client'
+
 import Link from 'next/link'
+import { usePathname, useSelectedLayoutSegments } from 'next/navigation'
+import { useEffect, useState } from 'react'
+import { Book } from '../types'
 
 function Header(): JSX.Element {
+  const pathName = usePathname()
+  const segments = useSelectedLayoutSegments()
+  const [title, setTitle] = useState<string>('')
+  useEffect(() => {
+    const [book, id] = segments
+    if (!book) {
+      setTitle('Bookstore')
+    } else if (book && id) {
+      const allBooks: Book[] = JSON.parse(
+        localStorage.getItem('bookList') || '[]',
+      )
+      const specificBook: Book | undefined = allBooks.find(
+        (item) => item.id === id,
+      )
+      if (specificBook) {
+        setTitle('Book detail')
+      } else {
+        setTitle('404')
+      }
+    } else {
+      setTitle('404')
+    }
+  }, [pathName, segments])
   return (
     <>
-      <div>
-        <span>Bookstore</span>
+      <div className="h-6">
+        <span>{title}</span>
       </div>
       <div className="border-2 border-zinc-300 flex justify-between items-center bg-white p-2">
         <div>

@@ -14,7 +14,7 @@ function Table({
   currentPage,
 }: Props): JSX.Element {
   return (
-    <div className="my-5">
+    <div className="my-5 min-h-[246px]">
       <table className="table-fixed w-[100%] border-collapse">
         <thead>
           <tr>

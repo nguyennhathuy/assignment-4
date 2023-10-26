@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { useRouter } from 'next/navigation'
+import { notFound, useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import DeleteModal from './DeleteModal'
 import { Book } from '../types'
@@ -20,6 +20,7 @@ function DetailItem({ id }: Props): JSX.Element {
       (item) => item.id === id,
     )
     if (specificBook) setSpecificBook(specificBook)
+    if (!specificBook) notFound()
   }, [])
   function handleToggleDeleteModal(): void {
     setIsOpenDeleteModal((prev) => !prev)
