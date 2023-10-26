@@ -21,6 +21,7 @@ function DeleteModal({
             height={25}
             onClick={handleToggleDelteModal}
           />
+          
         </div>
         <div className="text-center py-10 flex justify-center">
           <p className="w-[250px]">
