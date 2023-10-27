@@ -64,6 +64,7 @@ function CreateModal({
             onClick={handleToggleCreateModal}
           />
         </div>
+        
         <div className="flex flex-col my-5">
           <form onSubmit={handleSubmit} id="myform">
             {Object.keys(TABLE_HEADER).map((item, index) => (
