@@ -22,6 +22,7 @@ function DetailItem({ id }: Props): JSX.Element {
     if (specificBook) setSpecificBook(specificBook)
     if (!specificBook) notFound()
   }, [])
+
   function handleToggleDeleteModal(): void {
     setIsOpenDeleteModal((prev) => !prev)
   }
